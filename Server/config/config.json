@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "anime",
+    "host": "localhost",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}
