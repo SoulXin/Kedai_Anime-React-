@@ -13,7 +13,7 @@
   2. npm install
   3. node index.js
   
- (Client Side)
+ (Client & Admin Side)
   1. cd Client
   2. npm install
   3. npm start
