@@ -84,10 +84,20 @@
 
   8. migrate again,write the code in Terminal "Server" "npx sequelize-cli db:migrate"
 
-  
 # Migrations :book:
 You can check this documentation
 https://sequelize.org/master/manual/migrations.html
 
+  # Yoo,.. :smirk:
+  If you : <br/>
+  :arrow_forward: get error <br/>
+  :arrow_forward: get any idea <br/>
+  :arrow_forward: have a suggestion <br/>
+  <br/>
+  And that all to improve this project,you can contact me. <br/>
+  im very grateful for your attention for this project :smiley: <br/>
+  <br/>
+  :envelope: dennyhendrawan892@yahoo.co.id <br/>
+  
  Happy CODING :smile:
 
