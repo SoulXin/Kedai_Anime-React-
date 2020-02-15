@@ -9,8 +9,9 @@
 # Starter Pack :package:
 
 (Server Side)
-  1. npm install
-  2. node index.js
+  1. cd Server
+  2. npm install
+  3. node index.js
   
  (Client Side)
   1. cd Client
@@ -20,34 +21,21 @@
 # Instructions :notebook:
   1. Open your phpmyadmin,add new databse <br/> -anime <br/> -anime_download
 	  
-  2. Now migrations the database
-      "npx sequelize-cli db:migrate"
-	  
-  3. Open the "config > config.js" folder and you will see the code as below <br/>
+  2. Open the "config > config.json" folder and you will see the code as below <br/>
     { <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "development": { <br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "username": "root", <br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "password": null, <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "username": "root", <br/> // Put your username database
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "password": null, <br/> // Put your password database
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "database": "anime", <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "host": "localhost", <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dialect": "mysql" <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br/>
     }
-	
-  4. Change code "config > config.js" file as follows : <br/>
-    { <br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "development": { <br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "username": "root", <br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "password": null, <br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "database": "anime_download", <br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "host": "localhost", <br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dialect": "mysql" <br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br/>
-    }
-	
-  5. Create new file in "migration" folder with name file "Link_Download.js" before that delete all file in "migration" folder
+  3. In terminal "Server" run code "npx sequelize-cli db:migrate"
   
-  6. Add this code in file "Link_Download.js" <br/>
+  4. Delete all file in migrations folder,and add the new file with name "Link_Download.js"
+  	  
+  5. Add this code in file "Link_Download.js" <br/>
   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'use strict';<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; module.exports = { <br/>
@@ -77,10 +65,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };
     
-  7. Now migrations again
-     "npx sequelize-cli db:migrate"
+  6. Change code "config > config.json" file as follows : <br/>
+    { <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "development": { <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "username": "root", <br/> // Put your username database
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "password": null, <br/> // Put your password database
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "database": "anime_download", <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "host": "localhost", <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dialect": "mysql" <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br/>
+    }
 
-  8. Go to "models" folder and change the name to "Model"
+  8. migrate again,write the code in Terminal "Server" "npx sequelize-cli db:migrate"
+
   
 # Migrations :book:
 You can check this documentation
